@@ -3,7 +3,7 @@ FROM debian:bullseye
 RUN apt-get update && \
     apt-get install git -y
 
-RUN echo x
+RUN echo xddasdafs
 
 RUN git clone https://github.com/FelixBrgm/.unix.git ~/.unix
 
