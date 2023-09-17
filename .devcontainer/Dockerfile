@@ -3,7 +3,7 @@ FROM debian:bullseye
 RUN apt-get update && \
     apt-get install git -y
 
-RUN git clone https://github.com/FelixBrgm/.dotfiles.git ~/.unix
+RUN git clone https://github.com/FelixBrgm/.dotfiles.git ~/.dotfiles
 
 RUN cd ~/.dotfiles && \
     chmod 777 ./setup.sh && \
