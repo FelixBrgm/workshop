@@ -2,11 +2,17 @@
 	"name": "workshop",
 	"dockerFile": "./Dockerfile",
 	"forwardPorts": [],
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash",
-	},
-	"extensions": [
-		"PKief.material-icon-theme"
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached"
 	],
-	"workspaceFolder": "/workspaces/workshop/source" // change 42-ft_transendence to name of repo when copied
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			},
+			"extensions": []
+		}
+	},
+	"workspaceFolder": "/workspaces/workshop"
 }
